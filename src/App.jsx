@@ -1,28 +1,26 @@
 import "./App.css";
 import { useState } from "react";
 
-const [counter, setCounter] = useState(0);
-
 const App = () => {
+  const [counter, setCounter] = useState(0);
+
   return (
     <>
       <header>
-        <img src="" alt="" />
-        <h1>React Counter</h1>
+        <h1>React Counter</h1>c
       </header>
-
       <main>
         <button
           onClick={() => {
-            setCounter(counter + 1);
+            setCounter(counter - 1);
           }}
         >
-          +
+          -
         </button>
 
         <button
           onClick={() => {
-            setCounter((counter = 0));
+            setCounter(0);
           }}
         >
           RESET
@@ -30,10 +28,10 @@ const App = () => {
 
         <button
           onClick={() => {
-            setCounter(counter - 1);
+            setCounter(counter + 1);
           }}
         >
-          -
+          +
         </button>
       </main>
 
