@@ -1,0 +1,9 @@
+header {
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+}
+
+header h1 {
+  margin: 20px auto;
+  font-size: 30px;
+}
