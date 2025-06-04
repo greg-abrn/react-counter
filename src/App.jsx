@@ -5,6 +5,8 @@ import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 
 const App = () => {
+  const [counter, setCounter] = useState(0);
+
   return (
     <>
       <header>
@@ -13,12 +15,29 @@ const App = () => {
       </header>
       <main className="container">
         <div>
-          <FaMinus className="operator" />
-          <p className="counter">0</p>
-          <FaPlus className="operator" />
+          <FaMinus
+            className="operator"
+            onClick={() => {
+              setCounter(counter - 1);
+            }}
+          />
+          <p className="counter">{counter}</p>
+          <FaPlus
+            className="operator"
+            onClick={() => {
+              setCounter(counter + 1);
+            }}
+          />
         </div>
         <div>
-          <button className="reset">Reset</button>
+          <button
+            className="reset"
+            onClick={() => {
+              setCounter(0);
+            }}
+          >
+            Reset
+          </button>
         </div>
       </main>
       <footer className="container">
