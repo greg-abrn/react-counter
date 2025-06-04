@@ -1,41 +1,27 @@
 import "./App.css";
 import { useState } from "react";
+import { FaCalculator } from "react-icons/fa";
+import { FaMinus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 
 const App = () => {
-  const [counter, setCounter] = useState(0);
-
   return (
     <>
       <header>
-        <h1>React Counter</h1>c
+        <FaCalculator className="logo" />
+        <h1>React Counter</h1>
       </header>
-      <main>
-        <button
-          onClick={() => {
-            setCounter(counter - 1);
-          }}
-        >
-          -
-        </button>
-
-        <button
-          onClick={() => {
-            setCounter(0);
-          }}
-        >
-          RESET
-        </button>
-
-        <button
-          onClick={() => {
-            setCounter(counter + 1);
-          }}
-        >
-          +
-        </button>
+      <main className="container">
+        <div>
+          <FaMinus className="operator" />
+          <p className="counter">0</p>
+          <FaPlus className="operator" />
+        </div>
+        <div>
+          <button className="reset">Reset</button>
+        </div>
       </main>
-
-      <footer>
+      <footer className="container">
         <p>
           Made with <span>React</span> at <span>Le Reacteur</span> by{" "}
           <span>Greg</span>
